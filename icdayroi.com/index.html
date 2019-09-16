@@ -53,8 +53,8 @@
 		<div class="content">
 			<div class="menu">
 				<ul>
-					<li style="border:none">Trang chủ</li>
-					<li class="dropdown"><a>Sản phẩm</a>  &nbsp;<i class="fa fa-sort-down bigfonts"></i>
+					<li><a href="#" style="border:none"><i class="fa fa-home"></i>&nbsp;Trang chủ</a></li>
+					<li class="dropdown"><a>Sản phẩm</a><i class="fa fa-sort-down bigfonts"></i>
 						<ul class="dropdown-content">
 							<li>RASPBERRY PI</li>
 							<li>arduino</li>
@@ -65,9 +65,10 @@
 
 						</ul>
 					</li>
-					<li>Cắt khắc laser</li>
-					<li>giới thiệu</li>
-					<li>Liên hệ</li>
+					<li><a href="#">Cắt khắc laser</a></li>
+					<li><a href="#">blog</a></li>
+					<li><a href="#">giới thiệu</a></li>
+					<li><a href="#">Liên hệ</a></li>
 					<li class="hotline">
 						<img src="images/phone-menu.png">
 						Hotline : (028) 62700104
@@ -627,20 +628,18 @@
 		<script type="text/javascript">
 			var index = 0;
 			show_slide();
-
 			function show_slide(){
-				var i;
 				var slides = document.getElementsByClassName('slide');
-				for(i=0; i<slides.length;i++){
+				for(var i=0; i<slides.length;i++){
 					slides[i].style.display ="none";
 				}
 				index++;
 				if(index > slides.length) index = 1;
 
 				slides[index-1].style.display = "block";
-				setTimeout(show_slide,2000);
-
 			}
+			setInterval(show_slide,3000);
+
 		</script>
 	</div>
 	
